@@ -43,7 +43,7 @@ int main()
     // Code to time Quick Sort
 
     t = clock(); // reinitialise t
-    quicksort(array, 0, count-1); // Calls mergesort algorithm
+    quicksort(array, 0, count-1); // Calls Quick Sort algorithm
 
     printf("\n\nQuick Sort:\n");
 
