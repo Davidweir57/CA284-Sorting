@@ -39,6 +39,18 @@ int main()
     printf("\nElapsed time for Merge Sort: %f seconds\n", ((double)t) / CLOCKS_PER_SEC);
 
     printarray(array, count);
+
+    // Code to time Quick Sort
+
+    t = clock(); // reinitialise t
+    quicksort(array, 0, count-1); // Calls mergesort algorithm
+
+    printf("\n\nQuick Sort:\n");
+
+    t = clock() - t;
+    printf("\nElapsed time for Quick Sort: %f seconds\n", ((double)t) / CLOCKS_PER_SEC);
+
+    printarray(array, count);
 }
 
 void printarray(int array[], int count)
