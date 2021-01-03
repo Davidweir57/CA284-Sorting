@@ -14,24 +14,31 @@ int main()
     
     array = gen(count);
     
-    int t = clock();
-    s_sort(array, count);
+    int t = clock(); // initialise t to time the sorting algorithm
+
+    // Code for timing Selection Sort
+
+    s_sort(array, count); // sorts the generated array using selection sort
 
     printf("\n\nSelection Sort:\n");
-    printarray(array, count);
 
     t = clock() - t;
     // prints the time the program takes
-    printf("\nElapsed time for s_sort: %f seconds\n", ((double)t) / CLOCKS_PER_SEC);
+    printf("\nElapsed time for Selection Sort: %f seconds\n", ((double)t) / CLOCKS_PER_SEC);
 
-    t = clock();
-    mergesort(array, 0, count-1);
+    printarray(array, count); // prints array. This is done after the time is calculated so it does not effect our result
+
+    // Code to time Merge Sort
+
+    t = clock(); // reinitialise t
+    mergesort(array, 0, count-1); // Calls mergesort algorithm
 
     printf("\n\nMerge Sort:\n");
-    printarray(array, count);
 
     t = clock() - t;
-    printf("\nElapsed time for s_sort: %f seconds\n", ((double)t) / CLOCKS_PER_SEC);
+    printf("\nElapsed time for Merge Sort: %f seconds\n", ((double)t) / CLOCKS_PER_SEC);
+
+    printarray(array, count);
 }
 
 void printarray(int array[], int count)
