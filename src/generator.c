@@ -14,10 +14,7 @@ void random(int count, int arr[])
 int* gen(int count)
 {
     int *array;
-    char type[7];
-
-    // printf("How long is your list of integers:\n");
-    // scanf("%d", &count);
+    char type[8];
 
     printf("Array Type\n");
     scanf("%s", &type);
@@ -52,11 +49,6 @@ int* gen(int count)
             break;
         }
     } while(0);
-
-    // printf("Generated Array:\n");
-    // // print elements of array
-    // for(int j=0; j<count; j++)
-    //     printf("%d ", array[j]);
 
     return array;
 
