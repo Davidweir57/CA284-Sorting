@@ -19,7 +19,7 @@ int main()
     
     array = gen(count);
 
-    copy_arr = (int*)malloc(count * sizeof(int));;
+    copy_arr = (int*)malloc(count * sizeof(int));
 
     // creates a copy of our array so we can "unsort" to test our algorithm
     for(int i=0; i<count; i++)
