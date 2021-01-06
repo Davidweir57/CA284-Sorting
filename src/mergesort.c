@@ -1,3 +1,4 @@
+#include <stdlib.h>
 void merge(int arr[], int l, int m, int r)
 {
     int i, j, k;
@@ -5,8 +6,10 @@ void merge(int arr[], int l, int m, int r)
     int n2 = r - m;
  
     /* create temp arrays */
-    int L[n1], R[n2];
- 
+    //int L[n1], R[n2];
+    int* L = malloc((n1) * sizeof(int));
+    int* R = malloc((n2) * sizeof(int));
+
     /* Copy data to temp arrays L[] and R[] */
     for (i = 0; i < n1; i++)
         L[i] = arr[l + i];
