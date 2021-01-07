@@ -27,6 +27,7 @@ int* gen(int count)
 
     random(count, array);
 
+    // the do/while loop allows me to use break to exit the if statement should the user choose a random array
     do {
         if (strcmp(type, "random") != 0)
         {
@@ -39,10 +40,17 @@ int* gen(int count)
                 sort(count, array);
                 reverese(array, 0, count-1);
             }
-            else
+            else if (strcmp(type, "partial") == 0)
             {
                 partial(count, array);
             }
+            else
+            {
+                // error handling
+                printf("error");
+                exit(0);
+            }
+            
         }
         else
         {
