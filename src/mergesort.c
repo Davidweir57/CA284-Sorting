@@ -1,67 +1,68 @@
 #include <stdlib.h>
-void merge(int arr[], int l, int m, int r)
+void merge(int arr[], int left, int mid, int right)
 {
     int i, j, k;
-    int n1 = m - l + 1;
-    int n2 = r - m;
+    int mem1 = mid - left + 1;
+    int mem2 = right - mid;
  
-    /* create temp arrays */
-    //int L[n1], R[n2];
-    int* L = malloc((n1) * sizeof(int));
-    int* R = malloc((n2) * sizeof(int));
+    // temp arrays
+    // arrays are dynamically allocated memory so they can work on larger numbers (without this issues rise at numbers toughly greater than 500,000)
+    int* lst1 = malloc((mem1) * sizeof(int));
+    int* lst2 = malloc((mem2) * sizeof(int));
 
-    /* Copy data to temp arrays L[] and R[] */
-    for (i = 0; i < n1; i++)
-        L[i] = arr[l + i];
-    for (j = 0; j < n2; j++)
-        R[j] = arr[m + 1 + j];
+    // fill temp arrays
+    for (i = 0; i < mem1; i++)
+        lst1[i] = arr[left + i];
+    for (j = 0; j < mem2; j++)
+        lst2[j] = arr[mid + 1 + j];
  
-    /* Merge the temp arrays back into arr[l..r]*/
+    // merging
     i = 0; // Initial index of first subarray
     j = 0; // Initial index of second subarray
-    k = l; // Initial index of merged subarray
-    while (i < n1 && j < n2) {
-        if (L[i] <= R[j]) {
-            arr[k] = L[i];
+    k = left; // Initial index of merged subarray
+    while (i < mem1 && j < mem2)
+    {
+        if (lst1[i] <= lst2[j])
+        {
+            arr[k] = lst1[i];
             i++;
         }
-        else {
-            arr[k] = R[j];
+        else
+        {
+            arr[k] = lst2[j];
             j++;
         }
         k++;
     }
  
-    /* Copy the remaining elements of L[], if there
-    are any */
-    while (i < n1) {
-        arr[k] = L[i];
+    // Copy the remaining elements of lst1[]
+    while (i < mem1)
+    {
+        arr[k] = lst1[i];
         i++;
         k++;
     }
  
-    /* Copy the remaining elements of R[], if there
-    are any */
-    while (j < n2) {
-        arr[k] = R[j];
+    // Copy the remaining elements of lst2[]
+    while (j < mem2)
+    {
+        arr[k] = lst2[j];
         j++;
         k++;
     }
 }
 
-void mergesort(int arr[], int l, int r)
+void mergesort(int arr[], int left, int right)
 {
-    if (l >= r) {
-        // Same as (l+r)/2, but avoids overflow for
-        // large l and h
+    if (left >= right)
+    {
         return;
  
-        // Sort 
     }
-    int m = (l + r - 1) / 2;
-    mergesort(arr, l, m);
-    mergesort(arr, m + 1, r);
+    int mid = (left + right - 1) / 2;
+    mergesort(arr, left, mid);
+    mergesort(arr, mid + 1, right);
 
-    merge(arr, l, m, r);
+    merge(arr, left, mid, right);
 }
  

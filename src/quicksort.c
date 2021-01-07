@@ -1,4 +1,9 @@
-#include "quicksort.h"
+void swap(int* e1, int* e2)
+{
+    int tmp = *e1;
+    *e1 = *e2;
+    *e2 = tmp;
+}
 
 int partition(int arr[], int lo, int hi)
 {
@@ -24,16 +29,19 @@ void quicksort(int arr[], int start, int end)
 {
     if (start < end)
     {
+        // reducing recursion depth by using recursion for smaller partitions and iteration for the larger parts.
+        // This is because previous code caused a platform limit at larger numbers
+        // Without this issues arised on numbers over 100,000 on sorted and reverse sorted arrays
         int pivot = partition(arr, start, end);
-
-        quicksort(arr, start, pivot-1);
-        quicksort(arr, pivot+1, end);
+        if (pivot - start < end - pivot)
+        {
+            quicksort(arr, start, pivot - 1);
+            start = pivot + 1;
+        }
+        else
+        {
+            quicksort(arr, pivot + 1, end);
+            end = pivot - 1;
+        }
     }
-}
-
-void swap(int* e1, int* e2)
-{
-    int tmp = *e1;
-    *e1 = *e2;
-    *e2 = tmp;
 }
