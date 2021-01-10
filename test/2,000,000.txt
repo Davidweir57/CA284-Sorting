@@ -1,0 +1,54 @@
+How long is your list of integers:       
+2000000
+Array Type
+random
+
+Elapsed time for merge: 1.183000 seconds 
+
+Elapsed time for qsort: 0.681000 seconds 
+
+Elapsed time for Quick Sort: 0.051000 seconds
+
+Elapsed time for Selection Sort: 10249.033000 seconds
+
+
+How long is your list of integers:       
+2000000
+Array Type
+sorted
+
+Elapsed time for merge: 1.152000 seconds 
+
+Elapsed time for qsort: 0.296000 seconds 
+
+Elapsed time for Quick Sort: 0.029000 seconds
+
+Elapsed time for Selection Sort: 10245.422000 seconds
+
+
+How long is your list of integers:       
+2000000
+Array Type
+reverse
+
+Elapsed time for merge: 1.103000 seconds 
+
+Elapsed time for qsort: 0.356000 seconds 
+
+Elapsed time for Quick Sort: 0.020000 seconds
+
+Elapsed time for Selection Sort: 11335.564000 seconds
+
+
+How long is your list of integers:       
+2000000
+Array Type
+partial
+
+Elapsed time for merge: 1.284000 seconds 
+
+Elapsed time for qsort: 0.984000 seconds 
+
+Elapsed time for Quick Sort: 0.044000 seconds
+
+Elapsed time for Selection Sort: 11094.377000 seconds

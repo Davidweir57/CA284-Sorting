@@ -1,0 +1,74 @@
+How long is your list of integers:
+10
+Array Type
+random
+
+Elapsed time for merge: 0.000000 seconds
+
+Elapsed time for qsort: 0.000000 seconds
+
+Elapsed time for Quick Sort: 0.000000 seconds
+
+Elapsed time for Selection Sort: 0.000000 seconds
+
+Sorted:
+8126 13194 14342 16315 18164 19896 23882 28085 28543 29514
+Unsorted:
+14342 28543 29514 28085 8126 19896 16315 23882 13194 18164
+
+
+How long is your list of integers:
+10
+Array Type
+sorted
+
+Elapsed time for merge: 0.000000 seconds
+
+Elapsed time for qsort: 0.000000 seconds
+
+Elapsed time for Quick Sort: 0.000000 seconds
+
+Elapsed time for Selection Sort: 0.000000 seconds
+
+Sorted:
+7967 8437 9463 17450 17575 19865 20324 26425 28430 28706
+Unsorted:
+7967 8437 9463 17450 17575 19865 20324 26425 28430 28706
+
+
+How long is your list of integers:
+10
+Array Type
+reverse
+
+Elapsed time for merge: 0.000000 seconds
+
+Elapsed time for qsort: 0.000000 seconds
+
+Elapsed time for Quick Sort: 0.000000 seconds
+
+Elapsed time for Selection Sort: 0.000000 seconds
+
+Sorted:
+6294 12009 14074 17666 18119 19611 22602 25804 25909 29001
+Unsorted:
+29001 25909 25804 22602 19611 18119 17666 14074 12009 6294
+
+
+How long is your list of integers:
+10
+Array Type
+partial
+
+Elapsed time for merge: 0.000000 seconds
+
+Elapsed time for qsort: 0.000000 seconds
+
+Elapsed time for Quick Sort: 0.000000 seconds
+
+Elapsed time for Selection Sort: 0.000000 seconds
+
+Sorted:
+7786 10475 10978 11622 12345 13893 17741 24012 30462 31328
+Unsorted:
+10475 10978 13893 17741 30462 11622 12345 24012 31328 7786
