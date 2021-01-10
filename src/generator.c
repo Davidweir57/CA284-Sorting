@@ -5,7 +5,7 @@
 #include "generator.h"
 
 // generates an array of random numbers of a given size
-void random(int count, int arr[])
+void myrandom(int count, int arr[])
 {
     for(int i = 0; i<count; i++)
         arr[i]=rand();
@@ -25,7 +25,7 @@ int* gen(int count)
     // srand() function sets the starting point for a series of random integers. If not called the rand() will generate the same array everytime.
     srand(time(0));
 
-    random(count, array);
+    myrandom(count, array);
 
     // the do/while loop allows me to use break to exit the if statement should the user choose a random array
     do {
