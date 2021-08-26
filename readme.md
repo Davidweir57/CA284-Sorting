@@ -1,13 +1,5 @@
 # CA284 Systems Programming
 
-## Introduction
+This project compares the speed of different sorting algorithms using C. The repo contains a random number generator which will generate a given amount of numbers at random to be sorted. This set of random numbers can be given in random, sorted, reverse or partially sorted order.
 
-This repo contains the starter layout for the CA284 Systems Programming project worth 50%.  Pay attention to the instructions here.
-
-1. Fork this repository.
-2. download (clone) the forked repository to your computer
-3. start working on the project.
-
-
-
-You might want to set notifications and/or other "watch" features on the School of Computing Gitlab to keep abrest of any changes/additions I make to this original repository.  You will then be able to keep your forked version in sync with mine.  Note: _do not clone my repository, fork it_.
+To complete this project I also wrote my own implementation of Quicksort, Mergesort and selection sort, while using C's inbuilt qsort for comparison as well. The driver code takes the users' input to produce the random set and then tracks and outputs the time it took for my algorithms to sort that set, allowing the user to compare the results easily. The driver also contains inbuilt error handling.
